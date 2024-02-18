@@ -68,7 +68,8 @@ const Resume = () => {
                   color: "var(--yellow-theme-main-color)",
                   border: "1.5px solid var(--yellow-theme-main-color)",
                 }}
-                date="2013 - 2017"
+                // date="2013 - 2017"
+                date={item.timeLine}
                 iconStyle={{
                   background: "#181818",
                   color: "var(--yellow-theme-main-color)",
