@@ -38,6 +38,9 @@ const Navbar = () => {
   const handleToggleIcon = () => {
     setToggleIcon(!toggleIcon);
   };
+  const handleItemClick = () => {
+    setToggleIcon(true); // Close the navbar popup when an item is clicked
+  };
 
   return (
     <div>
@@ -50,7 +53,9 @@ const Navbar = () => {
         <ul className={`navbar_container_menu ${toggleIcon ? "" : "active"}`}>
           {data.map((item, key) => (
             <li key={key} className="navbar_container_menu_item">
-              <Link to={item.to} className="navbar_container_menu_item_links">
+              <Link to={item.to} className="navbar_container_menu_item_links"
+                onClick={handleItemClick}
+              >
                 {item.label}
               </Link>
             </li>

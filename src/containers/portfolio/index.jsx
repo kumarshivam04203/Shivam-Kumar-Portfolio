@@ -3,6 +3,7 @@ import PageHeaderContent from "../../components/pageHeaderContent";
 import { AiFillProject } from "react-icons/ai";
 import { filterOptions, portfolioData } from "./portfolioData";
 import './style.scss'
+import { Link } from "react-router-dom";
 
 const Portfolio = () => {
   const [filterValue, setFilterValue] = useState(1);
@@ -51,9 +52,9 @@ const Portfolio = () => {
               className="portfolio_content_cards_item"
             >
               <div className="portfolio_content_cards_item_img-wrapper">
-                <a>
-                  <img src={item.image} alt="project image" />
-                </a>
+                <Link to="" >
+                  <img src={item.image} alt="" />
+                </Link>
               </div>
               <div className="overlay">
                 {hoveredIndex === key && (

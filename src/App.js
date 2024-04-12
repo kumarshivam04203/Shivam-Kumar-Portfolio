@@ -10,11 +10,13 @@ import Portfolio from "./containers/portfolio";
 import Contact from "./containers/contact";
 import Navbar from "./components/navBar";
 import Video from "./videos";
+import { clarity } from "react-microsoft-clarity";
 
 function App() {
   const location = useLocation();
   const renderParticleJsIfCurrentPageIsHomePage = location.pathname === "/";
 
+  clarity.init(process.env.REACT_APP_CLARITY_TOKEN)
   return (
     <div className="App">
       {/*particles js */}
